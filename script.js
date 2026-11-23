@@ -5,6 +5,23 @@
   "use strict";
 
   const $ = (selector, root = document) => root.querySelector(selector);
+  const lightbox = $("#photoLightbox");
+  const lightboxImage = $("#lightboxImage");
+  const lightboxCaption = $("#lightboxCaption");
+  const closeLightbox = () => { if (lightbox?.open) lightbox.close(); };
+  $$('[data-lightbox="evidence"]').forEach((link) => link.addEventListener("click", (event) => {
+    if (!lightbox || !lightboxImage) return;
+    event.preventDefault();
+    const image = $("img", link);
+    lightboxImage.src = link.href;
+    lightboxImage.alt = image?.alt || "Experimental photograph";
+    lightboxCaption.textContent = image?.alt || "RED DUST LAB experimental photograph";
+    lightbox.showModal();
+  }));
+  $("#lightboxClose")?.addEventListener("click", closeLightbox);
+  lightbox?.addEventListener("click", (event) => { if (event.target === lightbox) closeLightbox(); });
+  lightbox?.addEventListener("close", () => { if (lightboxImage) lightboxImage.removeAttribute("src"); });
+
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
   // Mobile navigation
@@ -160,7 +177,7 @@
     labels: ["2:50 p.m.", "3:03 p.m.", "3:06 p.m."],
     rover01: { label: "Rover 01", color: "#c56f4b", voltage: [9.8, 8.9, 0], decrease: [0, 9.1836734694, 100], names: ["9.8 V", "8.9 V", "No measurable output"] },
     rover02: { label: "Rover 02", color: "#4f9ab5", voltage: [4.8, 4.5, 3.5], decrease: [0, 6.25, 27.0833333333], names: ["4.8 V", "4.5 V", "≈3.5 V"] },
-    main: { label: "Main panel", color: "#c49a4c", voltage: [0.8, 0, null], decrease: [0, 100, null], names: ["0.8 V", "No measurable output", "No separate final reading"] }
+    main: { label: "Main panel", color: "#c49a4c", voltage: [0.8, 0, 0], decrease: [0, 100, 100], names: ["0.8 V", "No measurable output", "0 V / no measurable output"] }
   };
   let chartMode = "voltage";
   const visibleSeries = new Set(["rover01", "rover02", "main"]);
@@ -274,8 +291,8 @@
       ["Observation", "Time", "Rover 01 (V)", "Rover 02 (V)", "Main panel (V)", "Notes"],
       ["Initial", "2:50 p.m.", "9.8", "4.8", "0.8", "Initial recorded readings"],
       ["Second", "Timestamp to verify", "9.0", "4.6", "", "Main panel: very small output, not quantified; excluded from time-series chart"],
-      ["Third", "3:03 p.m.", "8.9", "4.5", "", "Main panel: no measurable output reported"],
-      ["Final", "3:06 p.m.", "", "3.5 approx.", "", "Rover 01: no measurable output; no separate final main-panel reading supplied"]
+      ["Third", "3:03 p.m.", "8.9", "4.5", "0", "Main panel: 0 V / no measurable output reported"],
+      ["Final", "3:06 p.m.", "0", "3.5 approx.", "0", "Rover 01 and main panel: 0 V / no measurable output"]
     ];
     const csv = rows.map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(",")).join("\r\n");
     const blob = new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8;" });

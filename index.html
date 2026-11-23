@@ -24,10 +24,11 @@
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
       <a href="#research">Research</a>
       <a href="#experiment">Experiment</a>
-      <a href="#simulator">Simulator</a>
+      <a href="simulation.html">Simulation Lab</a>
       <a href="#results">Results</a>
       <a href="#mars">Mars context</a>
-      <a href="#methods">Methods</a>
+      <a href="#recipe">Dust recipe</a>
+      <a href="#creator">Creator</a>
       <a href="#archive">Sources</a>
     </nav>
     <a class="nav-cta" href="#results">Explore findings <span>↗</span></a>
@@ -151,29 +152,41 @@
       </div>
     </section>
 
-    <section class="simulation-section section" id="simulator">
+    <section class="simulation-launch section" id="simulation-lab">
       <div class="section-shell">
-        <div class="section-kicker light reveal"><span>03</span> INTERACTIVE EXPLORER <i></i> CONCEPTUAL SURFACE COVERAGE</div>
-        <div class="section-heading reveal"><div><p class="overline">MAKE THE IDEA VISIBLE</p><h2>Explore a dusty<br>panel <em>surface.</em></h2></div><p class="section-aside">This preserves the original RED DUST LAB coverage explorer. It is a visual teaching aid—not a measurement, a Mars atmospheric model or a prediction of voltage or power.</p></div>
-        <div class="coverage-lab reveal">
-          <div class="coverage-controls">
-            <span class="chart-overline">CONCEPTUAL CONTROL / 01</span>
-            <label for="coverageRange">Illustrative surface coverage <strong id="coverageValue">25%</strong></label>
-            <input id="coverageRange" type="range" min="0" max="90" value="25" step="1">
-            <div class="coverage-range-labels"><span>0% / CLEAR</span><span>90% / HIGH COVERAGE</span></div>
-            <div class="coverage-readout"><div><small>ILLUSTRATIVE UNCOVERED AREA</small><b id="uncoveredValue">75%</b></div><div><small>MODEL STATUS</small><b>CONCEPT ONLY</b></div></div>
-            <p>Uncovered area is calculated as 100% minus the selected illustrative coverage. Real photovoltaic response depends on irradiance, panel design, particle properties, electrical configuration and other conditions.</p>
-          </div>
-          <div class="coverage-display"><div class="coverage-display-head"><span>PV SURFACE / SCHEMATIC VIEW</span><span>NOT TO SCALE</span></div><div class="solar-mock" id="solarMock"><div class="solar-grid"></div><div class="dust-layer" id="dustLayer"></div><div class="solar-glint"></div></div><div class="coverage-legend"><span><i class="clean-key"></i>Exposed panel surface</span><span><i class="dust-key"></i>Illustrative covered surface</span></div></div>
+        <div class="section-kicker light reveal"><span>03</span> INTERACTIVE DATA REPLAY <i></i> SEPARATE SIMULATION LAB</div>
+        <div class="simulation-launch-card reveal">
+          <div class="launch-orbit" aria-hidden="true"><span></span><i></i><b></b></div>
+          <div class="launch-copy"><p class="overline">RDL-001 / OBSERVATION REPLAY</p><h2>Move through<br>the experiment <em>in time.</em></h2><p>Explore the four recorded observation points with a timeline slider, direct time jumps and a playback control. The display uses your recorded readings and does not invent values between observations.</p><a class="button button-primary" href="simulation.html">Open Simulation Lab <span>↗</span></a></div>
+          <div class="launch-preview"><div class="preview-top"><span>LAST RECORDED STATE</span><span class="preview-rec">● DATA RECORDED</span></div><b>03:06 <small>PM</small></b><div class="preview-units"><span>ROVER 01 <strong>0 V</strong></span><span>ROVER 02 <strong>≈3.5 V</strong></span><span>MAIN <strong>0 V</strong></span></div><small class="preview-note">FINAL OBSERVATION / 3:06 P.M.</small></div>
         </div>
-        <p class="coverage-foot reveal"><strong>Scientific boundary:</strong> the slider only changes the drawing. It does not alter the recorded experimental data or calculate output.</p>
+      </div>
+    </section>
+
+    <section class="recipe-section section" id="recipe">
+      <div class="section-shell">
+        <div class="section-kicker reveal"><span>04</span> DUST ANALOGUE RECIPE <i></i> PREPARED BATCH RECORD</div>
+        <div class="section-heading reveal"><div><p class="overline">A DOCUMENTED 500-GRAM MIXTURE</p><h2>What went into<br>the <em>dust analogue.</em></h2></div><p class="section-aside">The composition below is transcribed from the supplied 250 g preparation record and doubled to describe the 500 g batch you said was prepared. It is the project's analogue recipe—not a claim that this is the exact composition of Martian atmospheric dust or regolith.</p></div>
+        <div class="recipe-summary reveal"><div><span>PREPARED BATCH TOTAL</span><b>500 <small>g</small></b></div><div><span>BASE RECIPE</span><b>250 <small>g</small></b></div><div><span>SCALING</span><b>×2</b></div></div>
+        <div class="recipe-table-card reveal"><div class="table-card-head"><div><span class="chart-overline">TABLE / ANALOGUE COMPONENTS</span><h3>Recorded and scaled composition</h3></div><span class="recipe-status">MASS VALUES PRESERVED</span></div>
+          <div class="table-scroll"><table class="data-table recipe-table"><thead><tr><th>Component</th><th>Recorded mass / 250 g</th><th>Scaled mass / 500 g</th><th>Mass-derived share</th></tr></thead><tbody>
+            <tr><td>Silicon dioxide (SiO₂)</td><td>98.25 g</td><td><strong>196.50 g</strong></td><td>39.3%</td></tr>
+            <tr><td>Iron oxide (Fe₂O₃, as recorded)</td><td>55.75 g</td><td><strong>111.50 g</strong></td><td>22.3%</td></tr>
+            <tr><td>Aluminium oxide (Al₂O₃)</td><td>21.25 g</td><td><strong>42.50 g</strong></td><td>8.5%</td></tr>
+            <tr class="recipe-alert-row"><td>Magnesium oxide (MgO)</td><td>19.50 g</td><td><strong>39.00 g</strong></td><td><strong>7.8%*</strong></td></tr>
+            <tr><td>Sri Lankan powdered rock fragments</td><td>55.25 g</td><td><strong>110.50 g</strong></td><td>22.1%</td></tr>
+            <tr class="recipe-total"><td><strong>TOTAL</strong></td><td><strong>250.00 g</strong></td><td><strong>500.00 g</strong></td><td><strong>100.0%</strong></td></tr>
+          </tbody></table></div>
+          <div class="recipe-warning"><b>* Composition discrepancy to verify</b><p>Your message listed MgO as 8.9%, but 19.50 g ÷ 250 g × 100 = <strong>7.8%</strong>. The five percentages as originally typed add to 101.1%. The recorded component masses add exactly to 250 g, and the percentages calculated from those masses add to 100.0%. This table therefore preserves the masses and calculates the mass shares from them. Please compare this row with your original preparation notes before final submission.</p></div>
+        </div>
+        <div class="recipe-note reveal"><span class="chart-overline">SCIENTIFIC RECORD</span><p>The 500 g batch is the doubled preparation quantity. The experiment record states that 10 g was introduced into the chamber during the 15-minute feed interval. That does not establish that all 10 g remained airborne or was deposited on the photovoltaic panels.</p></div>
       </div>
     </section>
 
     <section class="results-section section" id="results">
       <div class="section-shell">
-        <div class="section-kicker reveal"><span>04</span> MEASURED OBSERVATIONS <i></i> EXPERIMENT RDL-001</div>
-        <div class="section-heading reveal"><div><p class="overline">THE FIRST DATASET</p><h2>Voltage changed<br>as the run <em>progressed.</em></h2></div><p class="section-aside">These are the values supplied from the experiment record. The chart uses confirmed timestamps only; an additional observation remains outside the timeline until its time is checked against the video.</p></div>
+        <div class="section-kicker reveal"><span>05</span> MEASURED OBSERVATIONS <i></i> EXPERIMENT RDL-001</div>
+        <div class="section-heading reveal"><div><p class="overline">THE FIRST DATASET</p><h2>Voltage changed<br>as the run <em>progressed.</em></h2></div><p class="section-aside">These are the values supplied from the experiment record. The chart uses confirmed timestamps only; the intermediate observation is retained separately because its exact timestamp still needs verification.</p></div>
 
         <div class="result-summary">
           <div class="result-highlight reveal"><span>ROVER 02 / FINAL READING</span><b>3.5 <i>V</i></b><small>Approximate value at 3:06 p.m.</small><div class="highlight-bar"><i></i></div></div>
@@ -192,7 +205,7 @@
             <button class="legend-toggle selected" data-series="main" aria-pressed="true"><i class="legend-dot c-gold"></i> Main panel</button>
           </div>
           <div class="chart-wrap"><svg id="voltageChart" viewBox="0 0 920 360" role="img" aria-label="Line chart of voltage readings at 2:50 p.m., 3:03 p.m. and 3:06 p.m."></svg><div id="chartTooltip" class="chart-tooltip" role="status" aria-live="polite"></div></div>
-          <div class="chart-foot"><span><i class="foot-dot"></i> No measurable output is plotted at 0 V for visual comparison.</span><span>Main panel has no separate 3:06 p.m. reading.</span></div>
+          <div class="chart-foot"><span><i class="foot-dot"></i> No measurable output is plotted at 0 V for visual comparison.</span><span>Main panel: 0 V / no measurable output at 3:06 p.m.</span></div>
         </div>
 
         <div class="observation-grid">
@@ -201,8 +214,8 @@
             <div class="table-scroll"><table class="data-table"><thead><tr><th>Observation</th><th>Time</th><th>Rover 01</th><th>Rover 02</th><th>Main panel</th></tr></thead><tbody>
               <tr><td>Initial</td><td>2:50 p.m.</td><td>9.8 V</td><td>4.8 V</td><td>0.8 V</td></tr>
               <tr class="unverified-row"><td>Second</td><td><span class="verify-tag">VERIFY TIME</span></td><td>9.0 V</td><td>4.6 V</td><td>Very small output<br><small>Not quantified</small></td></tr>
-              <tr><td>Third</td><td>3:03 p.m.</td><td>8.9 V</td><td>4.5 V</td><td>No measurable output</td></tr>
-              <tr><td>Final</td><td>3:06 p.m.</td><td>No measurable output</td><td>≈3.5 V</td><td>No separate final reading</td></tr>
+              <tr><td>Third</td><td>3:03 p.m.</td><td>8.9 V</td><td>4.5 V</td><td>0 V<br><small>No measurable output</small></td></tr>
+              <tr><td>Final</td><td>3:06 p.m.</td><td>0 V<br><small>No measurable output</small></td><td>≈3.5 V</td><td>0 V<br><small>No measurable output</small></td></tr>
             </tbody></table></div>
             <p class="table-note">The second observation is retained in the raw record but excluded from the time-series chart because its timestamp needs verification. “No measurable output” is not claimed to be a laboratory-verified exact 0.000 V reading.</p>
           </div>
@@ -223,7 +236,7 @@
             <article class="timeline-event"><span class="timeline-pin"></span><small>2:50 P.M. / START</small><b>Initial readings</b><p>Rover 01: 9.8 V · Rover 02: 4.8 V · Main: 0.8 V</p></article>
             <article class="timeline-event event-warning"><span class="timeline-pin"></span><small>TIME TO VERIFY</small><b>Second observation</b><p>Rover 01: 9.0 V · Rover 02: 4.6 V · Main: very small, unquantified output.</p></article>
             <article class="timeline-event"><span class="timeline-pin"></span><small>3:03 P.M.</small><b>Main panel stops</b><p>Rover 01: 8.9 V · Rover 02: 4.5 V · Main: no measurable output.</p></article>
-            <article class="timeline-event event-end"><span class="timeline-pin"></span><small>3:06 P.M. / END</small><b>Final observation</b><p>Rover 01: no measurable output · Rover 02: approximately 3.5 V.</p></article>
+            <article class="timeline-event event-end"><span class="timeline-pin"></span><small>3:06 P.M. / END</small><b>Final observation</b><p>Rover 01: 0 V · Rover 02: approximately 3.5 V · Main: 0 V.</p></article>
           </div>
           <p class="table-note">The dust-feed interval was reported as 15 minutes. The timestamps 2:50 p.m. to 3:06 p.m. span 16 minutes. These are retained separately pending confirmation of the exact feed start/stop times.</p>
         </div>
@@ -232,7 +245,7 @@
 
     <section class="mars-section section" id="mars">
       <div class="section-shell">
-        <div class="section-kicker light reveal"><span>04</span> MARS CASE STUDY <i></i> MERIDIANI PLANUM</div>
+        <div class="section-kicker light reveal"><span>06</span> MARS CASE STUDY <i></i> MERIDIANI PLANUM</div>
         <div class="mars-layout">
           <div class="mars-copy reveal"><p class="overline">A REAL SOLAR-POWERED ROVER REGION</p><h2>Opportunity's<br>dust story at<br><em>Meridiani Planum.</em></h2><p>Meridiani Planum is a relevant case-study location because NASA's Opportunity rover operated there for more than seven Martian years. NASA's Mars Exploration Rover power-operations report describes a seasonally dependent pattern of gradual dust accumulation and removal at this site.</p><p>The mission team developed a <strong>Dust Factor</strong> to track how much sunlight penetrated dust accumulated on the solar array. A Dust Factor of 1.0 represented a clean array. This is a useful scientific precedent for studying dust and solar energy, although RED DUST LAB does not calculate a Mars Dust Factor.</p><a class="text-arrow" href="https://ntrs.nasa.gov/citations/20230007029" target="_blank" rel="noopener">Read NASA's rover power-operations report <span>↗</span></a></div>
           <div class="mars-visual reveal reveal-delay-1"><div class="mars-visual-top"><span>MARS / MERIDIANI PLANUM</span><span>CASE STUDY 01</span></div><div class="mars-disc"><div class="mars-crater crater-a"></div><div class="mars-crater crater-b"></div><div class="mars-crater crater-c"></div><div class="mars-ridge"></div><div class="mars-surface-dust"></div><div class="mars-rover"><div class="rover-mast"></div><div class="rover-body"></div><div class="rover-wheel w1"></div><div class="rover-wheel w2"></div><div class="rover-wheel w3"></div><div class="rover-solar s1"></div><div class="rover-solar s2"></div></div></div><div class="mars-caption"><span>OPPORTUNITY / MER-B</span><span>LANDED 25 JAN 2004</span></div><div class="mars-orbit-line"></div></div>
@@ -248,7 +261,7 @@
 
     <section class="scale-section section" id="scale">
       <div class="section-shell">
-        <div class="section-kicker reveal"><span>05</span> MATHEMATICAL SCALE COMPARISON <i></i> LAB → MARS CONTEXT</div>
+        <div class="section-kicker reveal"><span>07</span> MATHEMATICAL SCALE COMPARISON <i></i> LAB → MARS CONTEXT</div>
         <div class="section-heading reveal"><div><p class="overline">TRANSPARENT ASSUMPTIONS</p><h2>What does the<br>scale <em>actually say?</em></h2></div><p class="section-aside">The following is an illustrative calculation using the requested 0.01% assumption. It is not a measured Martian dust concentration or a validated atmospheric model.</p></div>
 
         <div class="scale-grid">
@@ -283,11 +296,11 @@
 
     <section class="methods-section section" id="methods">
       <div class="section-shell">
-        <div class="section-kicker reveal"><span>06</span> SCIENTIFIC METHOD & LIMITATIONS <i></i> INTERPRETATION</div>
+        <div class="section-kicker reveal"><span>08</span> SCIENTIFIC METHOD & LIMITATIONS <i></i> INTERPRETATION</div>
         <div class="section-heading reveal"><div><p class="overline">A RESULT IS ONLY AS STRONG AS ITS METHOD</p><h2>What the data<br><em>can—and cannot—say.</em></h2></div><p class="section-aside">A careful preliminary result is more credible than a confident conclusion that the experiment cannot yet support.</p></div>
         <div class="method-grid">
           <article class="method-card reveal"><span class="method-number">01</span><div><h3>Hypothesis</h3><p>Increasing dust exposure was expected to reduce light reaching the photovoltaic surfaces and therefore reduce their measured electrical response.</p></div></article>
-          <article class="method-card reveal reveal-delay-1"><span class="method-number">02</span><div><h3>Observed outcome</h3><p>Measured voltage decreased during the observation period. Rover 01 and the main panel were reported to have no measurable output by their stated stop times; Rover 02 retained approximately 3.5 V at the final observation.</p></div></article>
+          <article class="method-card reveal reveal-delay-1"><span class="method-number">02</span><div><h3>Observed outcome</h3><p>Measured voltage decreased during the observation period. At 3:06 p.m., Rover 01 and the main panel were reported at 0 V / no measurable output; Rover 02 retained approximately 3.5 V.</p></div></article>
           <article class="method-card reveal reveal-delay-2"><span class="method-number">03</span><div><h3>Preliminary interpretation</h3><p>The trend is consistent with the hypothesis, but this single run cannot isolate dust as the only cause of the voltage changes.</p></div></article>
           <article class="method-card reveal"><span class="method-number">04</span><div><h3>Further investigation</h3><p>Repeat trials, a dust-free control, measured light intensity, a defined electrical load, panel-temperature records and measured deposited mass would strengthen the analysis.</p></div></article>
         </div>
@@ -311,20 +324,43 @@
 
     <section class="evidence-section section" id="evidence">
       <div class="section-shell">
-        <div class="section-kicker reveal"><span>07</span> EXPERIMENTAL EVIDENCE <i></i> PHOTOGRAPHS & VIDEO</div>
-        <div class="evidence-heading reveal"><div><p class="overline">DOCUMENT THE REAL SETUP</p><h2>Show the work.<br><em>Keep the record.</em></h2></div><p class="section-aside">Your original photographs and video should be the evidence in this section. Add them to the website repository in an <code>assets</code> folder and replace the file names below.</p></div>
-        <div class="evidence-grid">
-          <article class="evidence-slot reveal"><div class="evidence-art evidence-art-setup"><span class="evidence-icon">01</span><div class="evidence-lines"></div><div class="evidence-box"></div></div><div><small>FIG. 03 / APPARATUS</small><h3>Full experimental setup</h3><p>Recommended: transparent chamber, light source, pump and all three photovoltaic units in one frame.</p><code>assets/experiment-setup.jpg</code></div></article>
-          <article class="evidence-slot reveal reveal-delay-1"><div class="evidence-art evidence-art-reading"><span class="evidence-icon">02</span><div class="meter-face">9.8<span>V</span></div></div><div><small>FIG. 04 / MEASUREMENT</small><h3>Voltage readings</h3><p>Use genuine frames showing the measuring instrument and its displayed values.</p><code>assets/voltage-readings.jpg</code></div></article>
-          <article class="evidence-slot reveal reveal-delay-2"><div class="evidence-art evidence-art-chamber"><span class="evidence-icon">03</span><div class="glass-shape"><i></i><i></i><i></i></div></div><div><small>FIG. 05 / DUST EXPOSURE</small><h3>Chamber during the run</h3><p>Show the dust-analogue exposure stage. Do not use an illustrative stock image as experimental evidence.</p><code>assets/chamber-exposure.jpg</code></div></article>
+        <div class="section-kicker reveal"><span>09</span> EXPERIMENTAL EVIDENCE <i></i> PHOTOGRAPHS & VIDEO</div>
+        <div class="evidence-heading reveal"><div><p class="overline">DOCUMENT THE REAL SETUP</p><h2>Show the work.<br><em>Keep the record.</em></h2></div><p class="section-aside">The images below are individually separated crops from the two supplied photo collages. Select any image to view it larger. Captions describe only what is visibly shown; the original video can be linked separately when uploaded.</p></div>
+        <div class="evidence-gallery">
+          <a class="evidence-photo reveal" href="assets/experiment-01.jpg" data-lightbox="evidence" aria-label="Open photo: Experimental control components"><img src="assets/experiment-01.jpg" alt="Experimental control components" loading="lazy"><span class="photo-index">FIG. 01</span><span class="photo-caption"><b>Experimental control components</b><small>Control hardware and connections</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-02.jpg" data-lightbox="evidence" aria-label="Open photo: Dust analogue feed container"><img src="assets/experiment-02.jpg" alt="Dust analogue feed container" loading="lazy"><span class="photo-index">FIG. 02</span><span class="photo-caption"><b>Dust analogue feed container</b><small>Container and feed tube</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-03.jpg" data-lightbox="evidence" aria-label="Open photo: Control and feed arrangement"><img src="assets/experiment-03.jpg" alt="Control and feed arrangement" loading="lazy"><span class="photo-index">FIG. 03</span><span class="photo-caption"><b>Control and feed arrangement</b><small>Close view of the connected control components</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-04.jpg" data-lightbox="evidence" aria-label="Open photo: Front view of chamber"><img src="assets/experiment-04.jpg" alt="Front view of chamber" loading="lazy"><span class="photo-index">FIG. 04</span><span class="photo-caption"><b>Front view of chamber</b><small>Transparent experimental chamber and equipment</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-05.jpg" data-lightbox="evidence" aria-label="Open photo: Side view of the assembly"><img src="assets/experiment-05.jpg" alt="Side view of the assembly" loading="lazy"><span class="photo-index">FIG. 05</span><span class="photo-caption"><b>Side view of the assembly</b><small>Light source, chamber and panel arrangement</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-06.jpg" data-lightbox="evidence" aria-label="Open photo: Photovoltaic chamber interior"><img src="assets/experiment-06.jpg" alt="Photovoltaic chamber interior" loading="lazy"><span class="photo-index">FIG. 06</span><span class="photo-caption"><b>Photovoltaic chamber interior</b><small>Panel and wire arrangement inside the chamber</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-07.jpg" data-lightbox="evidence" aria-label="Open photo: Initial electrical setup"><img src="assets/experiment-07.jpg" alt="Initial electrical setup" loading="lazy"><span class="photo-index">FIG. 07</span><span class="photo-caption"><b>Initial electrical setup</b><small>Digital displays and electrical connections</small></span></a>
+          <a class="evidence-photo reveal" href="assets/experiment-08.jpg" data-lightbox="evidence" aria-label="Open photo: Voltage display detail"><img src="assets/experiment-08.jpg" alt="Voltage display detail" loading="lazy"><span class="photo-index">FIG. 08</span><span class="photo-caption"><b>Voltage display detail</b><small>Close view of the measurement displays</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-01.jpg" data-lightbox="evidence" aria-label="Open photo: Full apparatus under illumination"><img src="assets/field-01.jpg" alt="Full apparatus under illumination" loading="lazy"><span class="photo-index">FIG. 09</span><span class="photo-caption"><b>Full apparatus under illumination</b><small>Overview with artificial light source</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-02.jpg" data-lightbox="evidence" aria-label="Open photo: Measurement display close-up"><img src="assets/field-02.jpg" alt="Measurement display close-up" loading="lazy"><span class="photo-index">FIG. 10</span><span class="photo-caption"><b>Measurement display close-up</b><small>Display and artificial-light controls</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-03.jpg" data-lightbox="evidence" aria-label="Open photo: Experiment setup overview"><img src="assets/field-03.jpg" alt="Experiment setup overview" loading="lazy"><span class="photo-index">FIG. 11</span><span class="photo-caption"><b>Experiment setup overview</b><small>Apparatus and control readings</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-04.jpg" data-lightbox="evidence" aria-label="Open photo: Dust feed container beside chamber"><img src="assets/field-04.jpg" alt="Dust feed container beside chamber" loading="lazy"><span class="photo-index">FIG. 12</span><span class="photo-caption"><b>Dust feed container beside chamber</b><small>Feed container and chamber side view</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-05.jpg" data-lightbox="evidence" aria-label="Open photo: Chamber and lamp arrangement"><img src="assets/field-05.jpg" alt="Chamber and lamp arrangement" loading="lazy"><span class="photo-index">FIG. 13</span><span class="photo-caption"><b>Chamber and lamp arrangement</b><small>Additional view of the assembled experiment</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-06.jpg" data-lightbox="evidence" aria-label="Open photo: Display and recording view"><img src="assets/field-06.jpg" alt="Display and recording view" loading="lazy"><span class="photo-index">FIG. 14</span><span class="photo-caption"><b>Display and recording view</b><small>Measurement displays with video recording in progress</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-07.jpg" data-lightbox="evidence" aria-label="Open photo: Interior rover model"><img src="assets/field-07.jpg" alt="Interior rover model" loading="lazy"><span class="photo-index">FIG. 15</span><span class="photo-caption"><b>Interior rover model</b><small>Interior scene and rover model</small></span></a>
+          <a class="evidence-photo reveal" href="assets/field-08.jpg" data-lightbox="evidence" aria-label="Open photo: Full chamber and components"><img src="assets/field-08.jpg" alt="Full chamber and components" loading="lazy"><span class="photo-index">FIG. 16</span><span class="photo-caption"><b>Full chamber and components</b><small>Overall view of the experimental assembly</small></span></a>
         </div>
-        <div class="video-note reveal"><span class="video-play">▶</span><div><b>Video evidence</b><p>Upload the experiment video to a public, viewable location and add its share link when ready. The website does not contain the original video file yet.</p></div><span class="link-pending">LINK TO ADD</span></div>
+        <div class="video-note reveal"><span class="video-play">▶</span><div><b>Video evidence</b><p>The experiment video is not included in the supplied image collages. Add a public share link here when you upload the original video to a video or cloud service.</p></div><span class="link-pending">LINK TO ADD</span></div>
+      </div>
+    </section>
+
+    <section class="creator-section section" id="creator">
+      <div class="section-shell">
+        <div class="section-kicker reveal"><span>10</span> ABOUT THE CREATOR <i></i> THE RESEARCHER BEHIND RDL-001</div>
+        <div class="creator-card reveal">
+          <div class="creator-portrait-wrap"><img src="assets/sinuri-portrait.jpg" alt="Portrait of RED DUST LAB creator Sinuri Tharinya Rodrigo" class="creator-portrait"><span class="portrait-orbit orbit-a"></span><span class="portrait-orbit orbit-b"></span></div>
+          <div class="creator-copy"><p class="overline">STUDENT RESEARCHER / SRI LANKA</p><h2>Lankapurage Sinuri<br>Tharinya Rodrigo</h2><p class="creator-role">Sri Lankan National Junior Research Scientist Student</p><p>A student researcher at the Ceylon Institute of Space Science (CISS), exploring astronomy, astrophysics, planetary science and space research. RED DUST LAB reflects an interest in connecting planetary science with practical experimentation and careful scientific documentation.</p><div class="creator-tags"><span>ASTRONOMY</span><span>ASTROPHYSICS</span><span>PLANETARY SCIENCE</span><span>SPACE RESEARCH</span></div><small class="creator-signoff">FOUNDER & STUDENT RESEARCHER / RED DUST LAB</small></div>
+        </div>
       </div>
     </section>
 
     <section class="archive-section section" id="archive">
       <div class="section-shell">
-        <div class="section-kicker light reveal"><span>08</span> RESEARCH ARCHIVE <i></i> REFERENCES & TRANSPARENCY</div>
+        <div class="section-kicker light reveal"><span>11</span> RESEARCH ARCHIVE <i></i> REFERENCES & TRANSPARENCY</div>
         <div class="section-heading reveal"><div><p class="overline">SOURCE THE SCIENCE</p><h2>Every comparison<br>needs <em>a source.</em></h2></div><p class="section-aside">The references below support the Mars background and scientific context. The laboratory readings are the project's own observations.</p></div>
         <div class="source-list">
           <a class="source-item reveal" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html?level=1" target="_blank" rel="noopener"><span class="source-index">REF / 01</span><div><b>NASA — Mars Fact Sheet</b><p>Mean surface atmospheric density, surface pressure, mean solar irradiance and planetary parameters.</p></div><span class="source-arrow">↗</span></a>
@@ -342,6 +378,7 @@
     <div class="footer-bottom"><span>© 2026–27 RED DUST LAB · PRELIMINARY EXPERIMENTAL DATA</span><span>NOT AN OFFICIAL NASA WEBSITE / NOT NASA-ENDORSED</span><span>BUILT FOR REPRODUCIBILITY</span></div>
   </footer>
 
+  <dialog class="photo-lightbox" id="photoLightbox" aria-label="Experimental photograph viewer"><button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button><img id="lightboxImage" alt="Expanded experimental photograph"><p id="lightboxCaption"></p></dialog>
   <script src="script.js"></script>
 </body>
 </html>
