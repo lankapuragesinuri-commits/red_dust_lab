@@ -5,6 +5,8 @@
   "use strict";
 
   const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
   const lightbox = $("#photoLightbox");
   const lightboxImage = $("#lightboxImage");
   const lightboxCaption = $("#lightboxCaption");
@@ -21,8 +23,6 @@
   $("#lightboxClose")?.addEventListener("click", closeLightbox);
   lightbox?.addEventListener("click", (event) => { if (event.target === lightbox) closeLightbox(); });
   lightbox?.addEventListener("close", () => { if (lightboxImage) lightboxImage.removeAttribute("src"); });
-
-  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
   // Mobile navigation
   const menuToggle = $("#menuToggle");
@@ -294,8 +294,9 @@
       ["Third", "3:03 p.m.", "8.9", "4.5", "0", "Main panel: 0 V / no measurable output reported"],
       ["Final", "3:06 p.m.", "0", "3.5 approx.", "0", "Rover 01 and main panel: 0 V / no measurable output"]
     ];
-    const csv = rows.map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(",")).join("\r\n");
-    const blob = new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8;" });
+    const csv = rows.map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(",")).join("
+");
+    const blob = new Blob(["﻿", csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
     anchor.href = url; anchor.download = "RED-DUST-LAB-RDL-001-observations.csv";
